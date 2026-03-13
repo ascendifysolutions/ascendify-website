@@ -1,0 +1,2133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="brand_assets/Lion-Gold.png">
+  <script>
+    // Restore path redirected from 404.html (GitHub Pages SPA workaround)
+    (function() {
+      const redirect = sessionStorage.getItem('redirect');
+      if (redirect) {
+        sessionStorage.removeItem('redirect');
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+  <title>Digital Marketing Agency for SMBs | Ascendify Solutions</title>
+  <meta name="description" content="We help small & mid-size businesses get found online, generate more leads, and compete in the digital space with custom SEO websites, local SEO & AI automation.">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('ZjqYvl3tD-2HZANoM');</script>
+
+  <style>
+    @font-face {
+      font-family: 'Exo2';
+      src: url('brand_assets/Fonts/Exo2-Black.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('brand_assets/Fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-style: normal;
+    }
+
+    :root {
+      --navy:        #1E1D2F;
+      --navy-l:      #252440;
+      --navy-ll:     #2c2a4a;
+      --gold:        #D5B129;
+      --gold-l:      #e8c93a;
+      --gold-d:      #b89820;
+      --white:       #FFFFFF;
+      --w70:         rgba(255,255,255,0.70);
+      --w50:         rgba(255,255,255,0.50);
+      --w30:         rgba(255,255,255,0.30);
+      --w10:         rgba(255,255,255,0.10);
+      --w06:         rgba(255,255,255,0.06);
+      --w03:         rgba(255,255,255,0.03);
+      --g20:         rgba(213,177,41,0.20);
+      --g12:         rgba(213,177,41,0.12);
+      --g08:         rgba(213,177,41,0.08);
+      --g05:         rgba(213,177,41,0.05);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Exo2', sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+
+    /* ─── UTILITIES ─── */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 48px; }
+    .gold { color: var(--gold); }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-family: 'Exo2', sans-serif;
+      font-size: 17px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .gold-rule {
+      width: 44px;
+      height: 3px;
+      background: var(--gold);
+      margin-bottom: 28px;
+    }
+    .gold-rule.centered { margin-left: auto; margin-right: auto; }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 152px;
+      padding: 0 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(30,29,47,0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(213,177,41,0.12);
+      transition: box-shadow 0.3s ease;
+    }
+    .nav.scrolled { box-shadow: 0 4px 40px rgba(0,0,0,0.5); }
+
+    .nav-logo { cursor: pointer; display: flex; align-items: center; }
+    .nav-logo img { height: 152px; width: auto; display: block; }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      color: var(--w70);
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--gold); }
+    .nav-links a.active::after { width: 100%; }
+
+    .nav-cta-btn {
+      background: var(--gold) !important;
+      color: var(--navy) !important;
+      padding: 11px 24px !important;
+      border-radius: 3px !important;
+      font-family: 'Exo2', sans-serif !important;
+      font-size: 18px !important;
+      letter-spacing: 0.07em !important;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .nav-cta-btn::after { display: none !important; }
+    .nav-cta-btn:hover { background: var(--gold-l) !important; color: var(--navy) !important; }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: transform 0.3s, opacity 0.3s; }
+
+    .mobile-nav {
+      display: none; position: fixed;
+      top: 116px; left: 0; right: 0; z-index: 190;
+      background: rgba(30,29,47,0.98); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(213,177,41,0.12);
+      flex-direction: column; gap: 0;
+      padding: 8px 0;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      padding: 16px 28px;
+      font-size: 15px; color: var(--w70);
+      cursor: pointer; transition: color 0.2s, background 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--white); background: var(--w03); }
+
+    /* ─── PAGE ROUTING ─── */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ─── BTN SYSTEM ─── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Exo2', sans-serif; font-weight: 900;
+      font-size: 13px; letter-spacing: 0.07em; text-transform: uppercase;
+      padding: 15px 30px; border-radius: 3px;
+      border: none; cursor: pointer; text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+    }
+    .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .btn:active { transform: translateY(1px); }
+
+    .btn-gold {
+      background: var(--gold); color: var(--navy);
+      box-shadow: 0 4px 24px rgba(213,177,41,0.25);
+    }
+    .btn-gold:hover {
+      background: var(--gold-l);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 36px rgba(213,177,41,0.38);
+    }
+
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 1.5px solid var(--w30);
+    }
+    .btn-outline:hover {
+      border-color: var(--gold); color: var(--gold);
+      background: var(--g05); transform: translateY(-2px);
+    }
+
+    /* ─── REVEAL ─── */
+    .rv {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .rv.vis { opacity: 1; transform: none; }
+    .rv.d1 { transition-delay: 0.10s; }
+    .rv.d2 { transition-delay: 0.20s; }
+    .rv.d3 { transition-delay: 0.30s; }
+    .rv.d4 { transition-delay: 0.40s; }
+
+    /* ─────────────────────────────────────────
+       HOME PAGE
+    ───────────────────────────────────────── */
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; padding-top: 152px;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+
+    .hero-glow-a {
+      position: absolute; top: -15%; right: -8%; z-index: 0;
+      width: 72%; padding-bottom: 72%;
+      background: radial-gradient(ellipse at 60% 40%, rgba(213,177,41,0.13) 0%, transparent 62%);
+      pointer-events: none;
+    }
+    .hero-glow-b {
+      position: absolute; bottom: -20%; left: -4%; z-index: 0;
+      width: 55%; padding-bottom: 55%;
+      background: radial-gradient(ellipse at center, rgba(213,177,41,0.055) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* Grain texture */
+    .hero::before {
+      content: ''; position: absolute; inset: 0; z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-size: 300px 300px;
+      opacity: 1; pointer-events: none;
+    }
+
+    .hero-lion-bg {
+      position: absolute; right: -3%; top: 50%; transform: translateY(-50%);
+      width: 50%; max-width: 660px;
+      opacity: 0.065; z-index: 0; pointer-events: none;
+      filter: brightness(1.1);
+    }
+
+    .hero-content {
+      position: relative; z-index: 1;
+      max-width: 720px;
+      padding: 80px 0 100px;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid var(--g20);
+      background: var(--g05);
+      color: var(--gold);
+      padding: 6px 16px; border-radius: 100px;
+      font-family: 'Exo2', sans-serif;
+      font-size: 16px; letter-spacing: 0.18em; text-transform: uppercase;
+      margin-bottom: 28px;
+      opacity: 0; animation: fadeUp 0.7s ease 0.15s forwards;
+    }
+    .hero-badge::before {
+      content: ''; width: 5px; height: 5px;
+      background: var(--gold); border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5.2vw, 76px);
+      color: var(--white);
+      margin-bottom: 24px;
+      line-height: 1.05;
+      opacity: 0; animation: fadeUp 0.85s ease 0.3s forwards;
+    }
+
+    .hero-sub {
+      font-size: 20px; line-height: 1.75;
+      color: var(--w70);
+      max-width: 560px;
+      margin-bottom: 44px;
+      opacity: 0; animation: fadeUp 0.85s ease 0.48s forwards;
+    }
+
+    .hero-btns {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      opacity: 0; animation: fadeUp 0.85s ease 0.64s forwards;
+    }
+    .hero-btns .btn { font-size: 16px; padding: 16px 32px; }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: rgba(213,177,41,0.055);
+      border-top: 1px solid var(--g12);
+      border-bottom: 1px solid var(--g12);
+      padding: 18px 48px;
+    }
+    .trust-items {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 36px 52px;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 11px;
+      font-size: 18px; letter-spacing: 0.05em; color: var(--w70);
+    }
+    .trust-check { color: var(--gold); font-size: 20px; }
+
+    /* PROBLEM */
+    .s-problem { padding: 120px 0; background: var(--navy); }
+
+    .problem-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: stretch;
+    }
+    .problem-grid > * { display: flex; flex-direction: column; }
+
+    .problem-copy p {
+      color: var(--w70); font-size: 20px; line-height: 1.8; margin-bottom: 18px;
+    }
+    .problem-callout {
+      border-left: 3px solid var(--gold);
+      background: var(--g05); padding: 20px 24px;
+      margin-top: 28px; border-radius: 0 6px 6px 0;
+    }
+    .problem-callout p {
+      font-style: italic; color: var(--white) !important;
+      font-size: 20px !important; margin-bottom: 0 !important;
+    }
+
+    .pain-stack { display: flex; flex-direction: column; gap: 10px; flex: 1; justify-content: space-between; }
+    .pain-card {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; gap: 10px;
+      padding: 28px 32px;
+      flex: 1;
+      background: var(--w03); border: 1px solid var(--w06);
+      border-radius: 8px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .pain-card:hover { border-color: var(--g20); background: var(--g05); }
+    .pain-ico { width: 38px; height: 38px; display: block; flex-shrink: 0; }
+    .pain-card h4 { font-family: 'Exo2', sans-serif; font-size: 20px; color: var(--white); margin-bottom: 4px; }
+    .pain-card p { font-size: 20px; color: var(--w70); line-height: 1.6; max-width: 320px; }
+
+    /* SOLUTION */
+    .s-solution {
+      padding: 120px 0; background: var(--navy-l);
+      position: relative; overflow: hidden;
+    }
+    .s-solution::before {
+      content: ''; position: absolute;
+      top: -30%; right: -15%; width: 60%; padding-bottom: 60%;
+      background: radial-gradient(ellipse at center, rgba(213,177,41,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .sol-header { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+    .sol-header .gold-rule { margin: 0 auto 28px; }
+    .sol-header h2 { font-size: clamp(28px, 3.8vw, 54px); margin-bottom: 18px; }
+    .sol-header p { font-size: 20px; color: var(--w70); }
+
+    .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .pillar {
+      padding: 40px 36px; border-radius: 8px;
+      background: var(--w03); border: 1px solid var(--w06);
+      position: relative; overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .pillar:hover {
+      border-color: rgba(213,177,41,0.28); transform: translateY(-4px);
+      box-shadow: 0 18px 52px rgba(0,0,0,0.28), 0 0 0 1px rgba(213,177,41,0.08);
+    }
+    .pillar-n {
+      position: absolute; top: 14px; right: 20px;
+      font-family: 'Exo2', sans-serif; font-size: 72px; line-height: 1;
+      color: rgba(213,177,41,0.07); letter-spacing: -0.04em;
+    }
+    .pillar-icon { width: 44px; height: 44px; margin-bottom: 20px; display: block; }
+    .pillar h3 {
+      font-family: 'Exo2', sans-serif; font-size: 20px;
+      color: var(--gold); margin-bottom: 10px;
+    }
+    .pillar p { font-size: 20px; color: var(--w70); line-height: 1.7; }
+
+    /* WHY */
+    .s-why { padding: 120px 0; background: var(--navy); }
+    .why-header { max-width: 580px; margin-bottom: 64px; }
+    .why-header h2 { font-size: clamp(28px, 3.8vw, 52px); margin-bottom: 16px; }
+    .why-header p { font-size: 20px; color: var(--w70); }
+
+    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .benefit {
+      padding: 32px 28px; border-radius: 8px;
+      background: var(--w03); border: 1px solid var(--w06);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .benefit:hover { border-color: rgba(213,177,41,0.25); transform: translateY(-3px); }
+    .benefit-num {
+      font-family: 'Exo2', sans-serif; font-size: 20px;
+      color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 10px; display: block;
+    }
+    .benefit h3 { font-family: 'Exo2', sans-serif; font-size: 20px; color: var(--white); margin-bottom: 10px; }
+    .benefit p { font-size: 20px; color: var(--w70); line-height: 1.7; }
+
+    /* STATS */
+    .s-stats {
+      padding: 40px 0; background: var(--gold);
+      position: relative; overflow: hidden;
+    }
+    .s-stats::before {
+      content: ''; position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        -45deg, rgba(0,0,0,0.04) 0, rgba(0,0,0,0.04) 1px, transparent 0, transparent 50%
+      );
+      background-size: 14px 14px;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; position: relative;
+    }
+    .stat {
+      text-align: center; padding: 8px 24px;
+      border-right: 1px solid rgba(30,29,47,0.18);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-n {
+      font-family: 'Exo2', sans-serif;
+      font-size: clamp(38px, 4.5vw, 62px); line-height: 1;
+      color: var(--navy); letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+    .stat-l { font-size: 12px; color: rgba(30,29,47,0.68); line-height: 1.45; letter-spacing: 0.02em; }
+
+    /* TESTIMONIALS */
+    .s-testimonials {
+      padding: 120px 0; background: var(--navy-l);
+      position: relative;
+    }
+    .test-header { text-align: center; max-width: 600px; margin: 0 auto 64px; }
+    .test-header .gold-rule { margin: 0 auto 28px; }
+    .test-header h2 { font-size: clamp(28px, 3.8vw, 52px); margin-bottom: 14px; }
+    .test-header p { font-size: 20px; color: var(--w70); }
+
+    .featured-win {
+      display: grid; grid-template-columns: auto 1fr; gap: 36px;
+      background: var(--g08); border: 1px solid var(--g20);
+      border-radius: 10px; padding: 44px; margin-bottom: 44px;
+      align-items: flex-start;
+    }
+    .win-badge {
+      background: var(--gold); color: var(--navy);
+      padding: 7px 14px; border-radius: 3px;
+      font-family: 'Exo2', sans-serif; font-size: 10px;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .featured-win h3 { font-family: 'Exo2', sans-serif; font-size: 20px; color: var(--gold); margin-bottom: 10px; }
+    .featured-win p { font-size: 20px; color: var(--w70); line-height: 1.75; }
+
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .test-card {
+      padding: 32px; border-radius: 8px;
+      background: var(--w03); border: 1px solid var(--w06);
+      transition: border-color 0.3s;
+    }
+    .test-card:hover { border-color: var(--g20); }
+    .qmark {
+      display: block; font-family: Georgia, serif; font-size: 56px;
+      color: rgba(213,177,41,0.35); line-height: 0.8; margin-bottom: 14px;
+    }
+    .test-text { font-size: 20px; color: var(--w70); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+    .test-author { font-family: 'Exo2', sans-serif; font-size: 11px; color: var(--gold); letter-spacing: 0.06em; }
+
+    /* FINAL CTA */
+    .s-cta {
+      padding: 120px 0; background: var(--navy);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .s-cta::before {
+      content: ''; position: absolute;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 90%; padding-bottom: 55%;
+      background: radial-gradient(ellipse at center, rgba(213,177,41,0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+    .cta-inner h2 { font-size: clamp(30px, 4vw, 58px); margin-bottom: 22px; }
+    .cta-inner p { font-size: 20px; color: var(--w70); line-height: 1.8; margin-bottom: 16px; }
+    .cta-btns { display: flex; justify-content: center; margin-top: 36px; gap: 14px; flex-wrap: wrap; }
+    .cta-btns .btn { font-size: 16px; }
+    .cta-note { display: block; font-size: 12px; color: var(--w30); margin-top: 18px; letter-spacing: 0.04em; }
+
+    /* FOOTER */
+    .footer {
+      background: #1E1D2F;
+      border-top: 1px solid rgba(213,177,41,0.12);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px; margin-bottom: 48px;
+    }
+    .footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+    .footer-lion-wrap { margin-bottom: 14px; }
+    .footer-lion-wrap img { width: 160px; height: 160px; object-fit: contain; display: block; }
+    .footer-tagline { font-size: 16px; color: var(--w30); line-height: 1.6; max-width: 260px; font-style: italic; }
+    .footer-col h4 {
+      font-family: 'Exo2', sans-serif; font-size: 18px;
+      color: var(--gold); letter-spacing: 0.10em;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul a {
+      font-size: 18px; color: var(--w30); cursor: pointer;
+      transition: color 0.2s; text-decoration: none;
+    }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid var(--w06);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-bottom p { font-size: 12px; color: var(--w30); }
+
+    /* ─────────────────────────────────────────
+       PRIVACY PAGE
+    ───────────────────────────────────────── */
+    .privacy-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 80px 0 100px;
+    }
+    .privacy-last-updated {
+      font-size: 13px;
+      color: var(--w50);
+      margin-bottom: 56px;
+      padding: 16px 22px;
+      background: var(--w03);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      line-height: 1.6;
+    }
+    .privacy-section {
+      margin-bottom: 52px;
+    }
+    .privacy-section h3 {
+      font-family: 'Exo2', sans-serif;
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--w10);
+    }
+    .privacy-section p {
+      font-size: 16px;
+      color: var(--w70);
+      margin-bottom: 14px;
+      line-height: 1.8;
+    }
+    .privacy-section p:last-child { margin-bottom: 0; }
+    .privacy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px;
+    }
+    .privacy-section ul li {
+      font-size: 16px;
+      color: var(--w70);
+      padding: 5px 0 5px 22px;
+      position: relative;
+      line-height: 1.75;
+    }
+    .privacy-section ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 12px;
+      top: 7px;
+    }
+    .privacy-section strong { color: var(--white); }
+    .privacy-section a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .privacy-section a:hover { opacity: 0.75; }
+
+    /* ─────────────────────────────────────────
+       ABOUT PAGE
+    ───────────────────────────────────────── */
+    .page-hero {
+      padding: 160px 0 96px;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; top: 0; right: -8%; width: 60%; height: 100%;
+      background: radial-gradient(ellipse at 60% 40%, rgba(213,177,41,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .page-hero h1 { font-size: clamp(36px, 5vw, 72px); margin-bottom: 22px; }
+    .page-hero p { font-size: 20px; color: var(--w70); line-height: 1.75; }
+
+    .s-about-open { padding: 100px 0; background: var(--navy-l); }
+    .about-open-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: stretch; }
+    .about-open-grid p { font-size: 20px; color: var(--w70); line-height: 1.8; margin-bottom: 18px; }
+
+    .s-founder { padding: 100px 0; background: var(--navy); }
+    .founder-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 72px; align-items: start; }
+    .founder-img-wrap {
+      border: 1px solid var(--g12);
+      border-radius: 8px; aspect-ratio: 3/4;
+      overflow: hidden; position: relative;
+    }
+    .founder-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+    .founder-img-wrap p { font-size: 13px; color: var(--w30); }
+    .founder-content p { font-size: 20px; color: var(--w70); line-height: 1.8; margin-bottom: 28px; }
+    .founder-quote {
+      border-left: 3px solid var(--gold);
+      background: var(--g05); padding: 22px 26px;
+      border-radius: 0 8px 8px 0; margin: 28px 0;
+    }
+    .founder-quote p { font-style: italic; font-size: 20px !important; color: var(--white) !important; margin-bottom: 10px !important; }
+    .founder-quote cite { font-size: 12px; color: var(--gold); letter-spacing: 0.05em; font-style: normal; }
+
+    .s-approach { padding: 100px 0; background: var(--navy-l); }
+    .approach-inner { max-width: 800px; margin: 0 auto; }
+    .approach-inner p { font-size: 20px; color: var(--w70); line-height: 1.8; margin-bottom: 18px; }
+
+    .s-team { padding: 100px 0; background: var(--navy); }
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+    .team-grid p { font-size: 20px; color: var(--w70); line-height: 1.8; margin-bottom: 18px; }
+    .team-cards { display: flex; flex-direction: column; gap: 16px; }
+    .team-card {
+      padding: 22px 24px; border-radius: 8px;
+      background: var(--w03); border: 1px solid var(--w06);
+    }
+    .team-card h4 { font-family: 'Exo2', sans-serif; font-size: 20px; color: var(--gold); margin-bottom: 6px; }
+    .team-card p { font-size: 20px !important; color: var(--w70) !important; margin: 0 !important; }
+
+    .s-values { padding: 100px 0; background: var(--navy-l); }
+    .values-grid { display: flex; flex-direction: column; gap: 18px; margin-top: 52px; }
+    .values-row { display: grid; gap: 18px; }
+    .values-row-1 { grid-template-columns: repeat(3, 1fr); }
+    .values-row-2 { grid-template-columns: repeat(2, 1fr); width: calc(66.66% + 6px); margin: 0 auto; }
+    .value-card {
+      padding: 28px 20px; text-align: center;
+      background: var(--w03); border: 1px solid var(--w06); border-radius: 8px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .value-card:hover { border-color: rgba(213,177,41,0.25); transform: translateY(-3px); }
+    .val-icon { width: 44px; height: 44px; margin: 0 auto 18px; display: block; }
+    .value-card h3 { font-family: 'Exo2', sans-serif; font-size: 20px; color: var(--gold); margin-bottom: 8px; }
+    .value-card p { font-size: 20px; color: var(--w70); line-height: 1.6; }
+
+    /* ─────────────────────────────────────────
+       SERVICES PAGE
+    ───────────────────────────────────────── */
+    .s-services-overview { padding: 28px 0 100px; }
+
+    .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .svc-card {
+      padding: 38px 32px; border-radius: 8px;
+      background: var(--w03); border: 1px solid var(--w06);
+      cursor: pointer; position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .svc-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(145deg, var(--g05) 0%, transparent 70%);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .svc-card:hover { border-color: rgba(213,177,41,0.3); transform: translateY(-5px); box-shadow: 0 20px 52px rgba(0,0,0,0.3); }
+    .svc-card:hover::before { opacity: 1; }
+    .svc-num { font-family: 'Exo2', sans-serif; font-size: 10px; color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px; display: block; }
+    .svc-icon { width: 44px; height: 44px; margin-bottom: 18px; display: block; }
+    .svc-card h3 { font-family: 'Exo2', sans-serif; font-size: 20px; color: var(--white); margin-bottom: 10px; }
+    .svc-card p { font-size: 20px; color: var(--w70); line-height: 1.7; margin-bottom: 28px; }
+    .svc-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'Exo2', sans-serif; font-size: 16px;
+      color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
+      margin-top: auto;
+      transition: gap 0.2s;
+    }
+    .svc-link:hover { gap: 10px; }
+    .svc-cta-card {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; cursor: pointer;
+      background: var(--g05) !important; border-color: var(--g12) !important;
+    }
+    .svc-cta-card:hover { border-color: rgba(213,177,41,0.4) !important; }
+
+    /* Service Detail */
+    .svc-detail-section { padding: 32px 0 80px; }
+    .svc-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: 'Exo2', sans-serif; font-size: 14px;
+      color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; margin-bottom: 36px;
+      transition: gap 0.2s;
+    }
+    .svc-back:hover { gap: 12px; }
+    .svc-detail-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 72px; align-items: start; }
+    .svc-detail-body p { font-family: 'Montserrat', sans-serif; font-size: 18px; color: var(--w70); line-height: 1.8; margin-bottom: 18px; }
+    .feat-list { list-style: none; display: flex; flex-direction: column; gap: 11px; margin: 24px 0; }
+    .feat-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-family: 'Montserrat', sans-serif; font-size: 18px; color: var(--w70);
+    }
+    .feat-list li::before {
+      content: ''; width: 6px; height: 6px;
+      background: var(--gold); border-radius: 50%;
+      flex-shrink: 0; margin-top: 9px;
+    }
+    .proof-box {
+      background: var(--g05); border: 1px solid var(--g12);
+      border-radius: 6px; padding: 18px 22px; margin-top: 24px;
+    }
+    .proof-box strong {
+      display: block; font-family: 'Exo2', sans-serif; font-size: 10px;
+      color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 7px;
+    }
+    .proof-box p { font-family: 'Montserrat', sans-serif !important; font-size: 18px !important; color: var(--w70) !important; margin: 0 !important; line-height: 1.6 !important; }
+
+    .sidebar-box {
+      position: sticky; top: 90px;
+      background: var(--g08); border: 1px solid var(--g20);
+      border-radius: 8px; padding: 32px;
+    }
+    .sidebar-box h3 { font-family: 'Exo2', sans-serif; font-size: 20px; margin-bottom: 10px; }
+    .sidebar-box p { font-family: 'Montserrat', sans-serif; font-size: 18px; color: var(--w70); line-height: 1.6; margin-bottom: 22px; }
+    .sidebar-box .btn { width: 100%; justify-content: center; }
+
+    /* ─────────────────────────────────────────
+       CONTACT PAGE
+    ───────────────────────────────────────── */
+    .s-contact { padding: 160px 0 120px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: stretch; }
+    .contact-info h2 { font-size: clamp(28px, 3.8vw, 50px); margin-bottom: 20px; }
+    .contact-info p { font-size: 20px; color: var(--w70); line-height: 1.8; margin-bottom: 14px; }
+    .contact-perks { display: flex; flex-direction: column; gap: 10px; margin-top: 32px; }
+    .perk {
+      display: flex; align-items: center; gap: 11px;
+      font-size: 20px; color: var(--w70);
+    }
+    .perk::before { content: '✓'; color: var(--gold); font-weight: bold; flex-shrink: 0; }
+    .scope-box {
+      margin-top: 40px; padding: 24px 26px;
+      background: var(--g05); border: 1px solid var(--g12); border-radius: 8px;
+    }
+    .scope-box h4 { font-family: 'Exo2', sans-serif; font-size: 12px; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
+    .scope-box ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .scope-box li { display: flex; gap: 10px; font-size: 20px; color: var(--w70); }
+    .scope-box li span { color: var(--gold); flex-shrink: 0; }
+
+    .contact-form-box {
+      background: var(--w03); border: 1px solid var(--w06);
+      border-radius: 10px; padding: 44px;
+      height: 100%; box-sizing: border-box;
+    }
+    .contact-form-box h2 { font-family: 'Exo2', sans-serif; font-size: 16px; margin-bottom: 6px; }
+    .contact-form-box .form-sub { font-size: 16px; color: var(--w50); margin-bottom: 32px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block; font-family: 'Exo2', sans-serif;
+      font-size: 16px; color: var(--gold);
+      letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 7px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.045); border: 1px solid var(--w10);
+      border-radius: 3px; padding: 13px 15px;
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-size: 16px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--w30); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--gold); background: var(--g05);
+    }
+    .form-group select option { background: var(--navy-l); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-btn-wrap { margin-top: 4px; }
+    .form-btn-wrap .btn { width: 100%; justify-content: center; font-size: 16px; }
+    .form-note { text-align: center; font-size: 11px; color: var(--w30); margin-top: 12px; letter-spacing: 0.03em; }
+
+    /* Modal */
+    .ty-modal {
+      display: none; position: fixed; inset: 0; z-index: 500;
+      background: rgba(20,19,34,0.96);
+      align-items: center; justify-content: center;
+    }
+    .ty-modal.open { display: flex; }
+    .ty-box {
+      background: var(--navy-l); border: 1px solid var(--g20);
+      border-radius: 12px; padding: 56px 48px;
+      max-width: 480px; width: 90%; text-align: center;
+    }
+    .ty-box img { width: 160px; margin: 0 auto 28px; display: block; opacity: 1; }
+    .ty-box h2 { font-size: 30px; margin-bottom: 14px; }
+    .ty-box p { font-size: 15px; color: var(--w70); line-height: 1.7; margin-bottom: 28px; }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .benefits { grid-template-columns: repeat(2, 1fr); }
+      .values-row-1 { grid-template-columns: repeat(3, 1fr); }
+      .values-row-2 { width: calc(66.66% + 6px); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 22px; }
+      .nav { padding: 0 22px; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero h1 { font-size: clamp(30px, 9vw, 50px); }
+      .hero-lion-bg { opacity: 0.04; width: 100%; }
+
+      .problem-grid,
+      .about-open-grid,
+      .founder-grid,
+      .team-grid,
+      .contact-grid,
+      .svc-detail-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .pillars,
+      .svc-grid,
+      .test-grid { grid-template-columns: 1fr; }
+
+      .benefits { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .values-row-1 { grid-template-columns: repeat(2, 1fr); }
+      .values-row-2 { grid-template-columns: 1fr; width: 100%; }
+
+      .featured-win { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-box { padding: 28px 22px; }
+      .trust-bar { padding: 16px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo" onclick="goto('home')">
+    <img src="brand_assets/Logo-transparent.png" alt="Ascendify Solutions">
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="goto('home')" data-page="home">Home</a></li>
+    <li><a onclick="goto('about')" data-page="about">About</a></li>
+    <li><a onclick="goto('services')" data-page="services">Services</a></li>
+    <li><a onclick="goto('contact')" data-page="contact" class="nav-cta-btn">Book a Free Call</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" id="ham">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a onclick="goto('home');closeMenu()">Home</a>
+  <a onclick="goto('about');closeMenu()">About</a>
+  <a onclick="goto('services');closeMenu()">Services</a>
+  <a onclick="goto('contact');closeMenu()" style="color:var(--gold)">Book a Free Discovery Call</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HOME PAGE
+═══════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow-a"></div>
+    <div class="hero-glow-b"></div>
+    <img class="hero-lion-bg" src="brand_assets/Lion-Gold.png" alt="">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">Modern Digital Marketing Agency</span>
+        <h1>Stop Being <span class="gold">Invisible</span> Online. Start Winning the Leads Your Competitors Are Stealing.</h1>
+        <p class="hero-sub">Your competitors are getting the calls. Let's change that — with a digital presence built to rank, get found by AI, and convert visitors into customers.</p>
+        <div class="hero-btns">
+          <button class="btn btn-gold" onclick="goto('contact')">Book Your Free Discovery Call →</button>
+          <button class="btn btn-outline" onclick="goto('services')">See How We Do It</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-items">
+      <div class="trust-item"><span class="trust-check">✓</span> Google-Compliant SEO</div>
+      <div class="trust-item"><span class="trust-check">✓</span> AI Search Optimized</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Local SEO Specialists</div>
+      <div class="trust-item"><span class="trust-check">✓</span> Serving Businesses Nationwide</div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="s-problem">
+    <div class="container">
+      <div class="problem-grid">
+        <div>
+          <span class="section-eyebrow rv">The Problem</span>
+          <div class="gold-rule rv"></div>
+          <h2 class="rv" style="font-size:clamp(26px,3.5vw,50px);margin-bottom:24px;">You've Got a Great Business. So Why Can't Anyone Find You?</h2>
+          <div class="problem-copy rv">
+            <p>You're doing everything right — showing up every day, delivering great work, keeping your customers happy. But online? You're invisible.</p>
+            <p>While you're heads down running your business, your competitor with a slick website is sitting at the top of Google, dominating the map pack, and fielding the calls that should be yours.</p>
+            <p>Here's the hard truth: having a website is no longer enough. You need a site that Google loves, that AI search engines actually surface, and that converts visitors into paying customers. And then you need the local SEO, the content, and the follow-up systems to back it all up.</p>
+            <p>Most small and mid-size businesses are stuck with outdated sites, inconsistent online listings, no local SEO strategy, and zero idea how to put AI to work in their operations.</p>
+            <div class="problem-callout">
+              <p>That's exactly the gap Ascendify Solutions was built to close.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rv d1">
+          <div class="pain-stack">
+            <div class="pain-card">
+              <svg class="pain-ico" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="19" cy="19" r="12"/>
+                <path d="M28 28l10 10"/>
+                <path d="M15 15l8 8M23 15l-8 8"/>
+              </svg>
+              <div><h4>Invisible on Google</h4><p>Competitors dominate results while your business stays buried on page 3.</p></div>
+            </div>
+            <div class="pain-card">
+              <svg class="pain-ico" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="22" cy="22" r="16"/>
+                <path d="M22 6v5M22 33v5M6 22h5M33 22h5"/>
+                <path d="M22 12l4 9-4 3-4-3 4-9z"/>
+                <path d="M22 32l-3-8h6l-3 8z" stroke-opacity="0.4"/>
+                <circle cx="22" cy="22" r="2" fill="#D5B129" stroke="none"/>
+              </svg>
+              <div><h4>Missing from the Map Pack</h4><p>Local customers can't find you and are calling your competition instead.</p></div>
+            </div>
+            <div class="pain-card">
+              <svg class="pain-ico" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="22" cy="7" r="3"/>
+                <circle cx="8" cy="27" r="3"/>
+                <circle cx="36" cy="27" r="3"/>
+                <circle cx="15" cy="40" r="3"/>
+                <circle cx="29" cy="40" r="3"/>
+                <path d="M22 10L9 24M22 10l13 14M10 30l4 7M34 30l-4 7M11 27h22"/>
+              </svg>
+              <div><h4>Invisible to AI Search</h4><p>ChatGPT, Perplexity, and Google AI Overviews won't surface unoptimized sites.</p></div>
+            </div>
+            <div class="pain-card">
+              <svg class="pain-ico" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="6" width="36" height="26" rx="2"/>
+                <path d="M4 24h36"/>
+                <path d="M16 32v4M28 32v4M12 36h20"/>
+                <path d="M15 13l14 9M29 13l-14 9"/>
+              </svg>
+              <div><h4>Outdated Website</h4><p>A slow, non-mobile site drives visitors away and tanks your Google ranking.</p></div>
+            </div>
+            <div class="pain-card">
+              <svg class="pain-ico" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 8h32L27 21H17L6 8z"/>
+                <path d="M17 21v11l10-4V21"/>
+                <path d="M30 33l8 7M38 33l-8 7"/>
+              </svg>
+              <div><h4>No Lead Generation System</h4><p>Inconsistent, unreliable leads based purely on word-of-mouth.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="s-solution">
+    <div class="container">
+      <div class="sol-header">
+        <span class="section-eyebrow rv">Our Solution</span>
+        <div class="gold-rule centered rv"></div>
+        <h2 class="rv">We Build the Digital Foundation Your Business Deserves</h2>
+        <p class="rv" style="margin-top:14px;">One trusted partner. Every piece of your online presence — built, optimized, and managed.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar rv">
+          <span class="pillar-n">01</span>
+          <svg class="pillar-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="8" width="36" height="28" rx="3"/>
+            <path d="M4 15h36"/>
+            <circle cx="10" cy="11.5" r="1" fill="#D5B129" stroke="none"/>
+            <circle cx="15" cy="11.5" r="1" fill="#D5B129" stroke="none"/>
+            <circle cx="20" cy="11.5" r="1" fill="#D5B129" stroke="none"/>
+            <path d="M14 25l4 4 8-8"/>
+          </svg>
+          <h3>Custom Websites Built to Rank</h3>
+          <p>Not just pretty websites. Sites engineered from the ground up to meet Google's ranking guidelines and structured for visibility in AI-powered search engines like ChatGPT, Perplexity, and Google's AI Overviews.</p>
+        </div>
+        <div class="pillar rv d1">
+          <span class="pillar-n">02</span>
+          <svg class="pillar-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 4C16.477 4 12 8.477 12 14c0 8.5 10 22 10 22s10-13.5 10-22c0-5.523-4.477-10-10-10z"/>
+            <circle cx="22" cy="14" r="4"/>
+            <path d="M13 36c-4 1-7 2.5-7 4 0 2.2 7.163 4 16 4s16-1.8 16-4c0-1.5-3-3-7-4" stroke-opacity="0.45"/>
+          </svg>
+          <h3>Local SEO That Puts You on the Map</h3>
+          <p>We take ownership of your Google Business Profile and optimize every inch of it — categories, keywords, reviews, posts, and more — so you show up when local customers are searching right now.</p>
+        </div>
+        <div class="pillar rv d2">
+          <span class="pillar-n">03</span>
+          <svg class="pillar-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M26 6H12a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V16L26 6z"/>
+            <path d="M26 6v10h10"/>
+            <path d="M16 22h12M16 28h8"/>
+            <path d="M29 31l3-3-3-3"/>
+          </svg>
+          <h3>Content That Works While You Sleep</h3>
+          <p>Strategic, keyword-rich content that positions you as the authority in your market. We write it, optimize it, and manage it so you can focus on running your business.</p>
+        </div>
+        <div class="pillar rv d3">
+          <span class="pillar-n">04</span>
+          <svg class="pillar-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="13" y="13" width="18" height="18" rx="3"/>
+            <path d="M17 13V9M27 13V9M17 31v4M27 31v4M13 17H9M13 27H9M31 17h4M31 27h4"/>
+            <rect x="18" y="18" width="8" height="8" rx="1" fill="rgba(213,177,41,0.18)" stroke="#D5B129"/>
+          </svg>
+          <h3>AI Automation That Multiplies Your Output</h3>
+          <p>From lead follow-up to customer communication workflows, we bring AI into your business operations in practical, measurable ways — so you can scale without burning out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ASCENDIFY -->
+  <section class="s-why">
+    <div class="container">
+      <div class="why-header">
+        <span class="section-eyebrow rv">Why Ascendify</span>
+        <div class="gold-rule rv"></div>
+        <h2 class="rv">We're Not a Big Agency. That's the Point.</h2>
+        <p class="rv" style="margin-top:14px;">Here's what sets us apart from every other digital marketing agency you've spoken to.</p>
+      </div>
+      <div class="benefits">
+        <div class="benefit rv">
+          <span class="benefit-num">Small Business Fluent</span>
+          <h3>We Speak Small Business</h3>
+          <p>With 15+ years in tech and hands-on consulting experience working directly with small businesses in Los Angeles and across the country, we understand your constraints. Real-world budgets. Real-world goals.</p>
+        </div>
+        <div class="benefit rv d1">
+          <span class="benefit-num">Systems Mindset</span>
+          <h3>We're Wired to Find What's Broken</h3>
+          <p>Our founder spent over a decade as a Software QA Test Manager. That same precision and analytical mindset is applied to every client's digital presence. We find the gaps, fix them with intention, and make sure results hold.</p>
+        </div>
+        <div class="benefit rv d2">
+          <span class="benefit-num">Future-Ready</span>
+          <h3>Future-Proof Visibility</h3>
+          <p>SEO isn't what it was three years ago. We build for both traditional Google search and the AI-powered search landscape — so when someone asks ChatGPT or Perplexity to recommend a business like yours, you show up.</p>
+        </div>
+        <div class="benefit rv d1">
+          <span class="benefit-num">Track Record</span>
+          <h3>Proven Local Results</h3>
+          <p>We've helped local service businesses rank #1 in Google Maps, build five-star review profiles, and generate consistent inbound leads. We know what it takes to compete and win at the local level.</p>
+        </div>
+        <div class="benefit rv d2">
+          <span class="benefit-num">One Team</span>
+          <h3>One Team. Full Picture.</h3>
+          <p>Strategy, execution, and ongoing management — all under one roof. No juggling vendors, no dropped balls, no excuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="s-stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-n" data-count="100" data-suffix="+">0+</div>
+          <div class="stat-l">Five-Star Reviews Generated for Clients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">#1</div>
+          <div class="stat-l">Google Maps Ranking Achieved for Featured Client</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n" data-count="15" data-suffix="+">0+</div>
+          <div class="stat-l">Years of Tech & Systems Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">Nationwide</div>
+          <div class="stat-l">Remote Services Available Across the U.S.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="s-testimonials">
+    <div class="container">
+      <div class="test-header">
+        <span class="section-eyebrow rv">Social Proof</span>
+        <div class="gold-rule centered rv"></div>
+        <h2 class="rv">Real Businesses. Real Results.</h2>
+        <p class="rv" style="margin-top:14px;">We let the numbers do the talking.</p>
+      </div>
+
+      <div class="featured-win rv">
+        <div class="win-badge">Featured Result</div>
+        <div>
+          <h3>Local Mobile Auto Detailing Business — Los Angeles, CA</h3>
+          <p>Crowded market. Zero online presence. One decision to work with Ascendify. Now they own the top of local search, lead their market in reputation, and have expanded to a second brand — all powered by the digital foundation we built together.</p>
+        </div>
+      </div>
+
+      <div class="test-grid">
+        <div class="test-card rv">
+          <span class="qmark">"</span>
+          <p class="test-text">Before Ascendify, we were basically invisible on Google. Within 90 days we were ranking in the top 3 for our main keywords and our phone was actually ringing.</p>
+          <span class="test-author">— Andrew P., Reliance Services, Los Angeles</span>
+        </div>
+        <div class="test-card rv d1">
+          <span class="qmark">"</span>
+          <p class="test-text">They built us a website that finally reflects the quality of our work — and the leads started coming in almost immediately.</p>
+          <span class="test-author">— Marvin L., Birds Presèrv, Los Angeles</span>
+        </div>
+        <div class="test-card rv d2">
+          <span class="qmark">"</span>
+          <p class="test-text">The AI automation piece alone saved us hours every week. Game changer for our team.</p>
+          <span class="test-author">— Owen T., Real Estate Agent, Los Angeles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="s-cta">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-eyebrow rv">Get Started</span>
+        <h2 class="rv">Your Competitors Aren't Waiting. <span class="gold">Neither Should You.</span></h2>
+        <p class="rv" style="margin-top:20px;">Every day without a proper digital strategy is a day your competitors are collecting leads that belong to you. Let's fix that — starting with a free, no-pressure Online Visibility Discovery Call.</p>
+        <p class="rv">In 60 minutes, we'll review your current digital setup, identify exactly where you're losing visibility, and give you a clear picture of what it will take to start winning online.</p>
+        <div class="cta-btns rv">
+          <button class="btn btn-gold" onclick="goto('contact')">Book My Free Discovery Call →</button>
+        </div>
+        <span class="cta-note rv" style="font-size:12px;">This discovery call is a no-pressure conversation — not a commitment or consulting engagement. Any next steps are entirely at your discretion. Ascendify Solutions makes no guarantees of specific outcomes or implementation from this session.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-lion-wrap"><img src="brand_assets/Lion-Gold.png" alt="Ascendify Solutions"></div>
+          <p class="footer-tagline">To cause something to rise. To elevate with intention.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a onclick="goto('home')">Home</a></li>
+            <li><a onclick="goto('about')">About</a></li>
+            <li><a onclick="goto('services')">Services</a></li>
+            <li><a onclick="goto('contact')">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a onclick="goto('services');showSvc('website')">Website Design & SEO</a></li>
+            <li><a onclick="goto('services');showSvc('ai-search')">AI Search Visibility</a></li>
+            <li><a onclick="goto('services');showSvc('local-seo')">Local SEO & GBP</a></li>
+            <li><a onclick="goto('services');showSvc('content')">Content Strategy</a></li>
+            <li><a onclick="goto('services');showSvc('ai-automation')">AI Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Started</h4>
+          <ul>
+            <li><a onclick="goto('contact')">Free Discovery Call</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Ascendify Solutions. All rights reserved. &nbsp;·&nbsp; <a onclick="goto('privacy')" style="color:var(--w30);text-decoration:none;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--w30)'">Privacy Policy</a></p>
+        <p>Built to Elevate. Wired to Win.</p>
+      </div>
+    </div>
+  </footer>
+</div><!-- /page-home -->
+
+
+<!-- ═══════════════════════════════════════════
+     ABOUT PAGE
+═══════════════════════════════════════════ -->
+<div class="page" id="page-about">
+
+  <section class="page-hero">
+    <img class="hero-lion-bg" src="brand_assets/Lion-Gold.png" alt="">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-eyebrow">About Us</span>
+        <div class="gold-rule"></div>
+        <h1>Built to Elevate. <span class="gold">Wired to Win.</span></h1>
+        <p>Most digital marketing agencies will tell you what you want to hear. We're going to tell you something different.</p>
+        <p style="margin-top:14px;">Ascendify Solutions was built for one reason: small and mid-size businesses deserve the same digital firepower as the big players — without the bloated retainers, the runaround, or the cookie-cutter strategies.</p>
+        <p style="margin-top:14px;">We combine custom website development, strategic SEO, local search optimization, and practical AI automation into a single, cohesive growth system — built specifically around your business, your market, and your goals.</p>
+        <p style="margin-top:14px;"><strong style="color:#FFFFFF;">No jargon. No fluff. No one-size-fits-all packages.</strong> Just a clear strategy, real execution, and results you can measure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-about-open">
+    <div class="container">
+      <div class="about-open-grid">
+        <div>
+          <span class="section-eyebrow rv">The Problem with Most Agencies</span>
+          <div class="gold-rule rv"></div>
+          <div class="rv">
+            <p>The reason your business isn't showing up on Google isn't because the algorithm is against you. It's because most digital strategies for small businesses are built backwards — all surface, no infrastructure.</p>
+            <p>Pretty websites with no SEO. Social media posts with no strategy. A Google Business Profile that hasn't been touched in two years.</p>
+            <p><span class="gold">Ascendify Solutions</span> was built to change that.</p>
+          </div>
+        </div>
+        <div class="rv d1" style="display:flex;flex-direction:column;">
+          <div style="position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--g12);flex:1;">
+            <img src="brand_assets/Photos/office-team.jpg" alt="Team working together" style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.72) saturate(0.85);">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(30,29,47,0.75) 0%, transparent 55%);"></div>
+            <div style="position:absolute;inset:0;background:rgba(213,177,41,0.07);mix-blend-mode:multiply;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-founder">
+    <div class="container">
+      <div class="founder-grid">
+        <div class="rv" style="padding-top:69px;">
+          <div class="founder-img-wrap">
+            <img src="brand_assets/Photos/Founder-Sam-Lee-Ascendify.jpeg" alt="Samuel Lee, Founder of Ascendify Solutions">
+          </div>
+        </div>
+        <div>
+          <span class="section-eyebrow rv">The Founder</span>
+          <div class="gold-rule rv"></div>
+          <h2 class="rv" style="font-size:clamp(24px,3vw,44px);margin-bottom:24px;">Samuel Lee</h2>
+          <div class="founder-content rv">
+            <p>I spent over 15 years in the software technology industry as a Software Quality Assurance Test Manager — leading lean teams of engineers and testers whose entire job was to find what was broken before it ever reached the user.</p>
+            <p>We shipped software that worked. Not approximately worked. Actually worked. Under pressure, at scale, with no room for failure.</p>
+            <p>That experience gave me something most marketers don't have: a systems mindset. The ability to look at something end-to-end, identify where it's leaking, and rebuild it so it holds.</p>
+            <p>When I started consulting with small service-based businesses in the Los Angeles area, I quickly realized something: most small businesses have the same problem that broken software has. The foundation is weak. The infrastructure doesn't support the goals. And no one is testing any of it.</p>
+            <p>So I made it my mission to close that gap.</p>
+          </div>
+          <div class="founder-quote rv">
+            <p>"Ascendify means to cause something to rise. To elevate with intention. That's not passive growth — that's active elevation. That's exactly what we do for every business we work with."</p>
+            <cite>— Samuel Lee, Founder, Ascendify Solutions</cite>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-approach">
+    <div class="container">
+      <div class="approach-inner">
+        <span class="section-eyebrow rv">How We Work</span>
+        <div class="gold-rule rv"></div>
+        <h2 class="rv" style="font-size:clamp(24px,3vw,44px);margin-bottom:28px;">The Ascendify Approach</h2>
+        <div class="rv">
+          <p>With the rise of AI tools, automation platforms, and an increasingly competitive local search landscape, the rules of digital marketing have fundamentally shifted. Businesses that understand how to harness AI — not fear it — are the ones that are winning.</p>
+          <p>At Ascendify, we've made it a core mission to be the bridge between small businesses and the technology that can transform their operations. We don't just talk about AI. We implement it practically, in ways that save you time, increase your output, and protect your bottom line.</p>
+          <p>We combine the precision of a QA engineer, the strategy of a digital marketer, and the entrepreneurial instinct of someone who has been in the trenches with small businesses — to deliver a digital marketing experience that actually moves the needle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-team">
+    <div class="container">
+      <div class="team-grid">
+        <div>
+          <span class="section-eyebrow rv">The Team</span>
+          <div class="gold-rule rv"></div>
+          <h2 class="rv" style="font-size:clamp(24px,3vw,44px);margin-bottom:24px;">Senior-Level Attention. From Day One.</h2>
+          <div class="rv">
+            <p>Ascendify Solutions operates as a boutique, founder-led consultancy. Samuel leads every client engagement personally — which means you get senior-level strategy and attention on your account from day one.</p>
+            <p>For AI automation and systems implementations, we leverage a curated network of specialized AI consultants who bring deep technical expertise to the table — ensuring every automation we deploy is built to perform, scale, and integrate seamlessly into your existing operations.</p>
+            <p>No handoffs to junior employees. No account managers who don't know your business. Just direct, expert partnership.</p>
+          </div>
+        </div>
+        <div class="rv d1" style="padding-top:69px;">
+          <div class="team-cards">
+            <div class="team-card">
+              <h4>Samuel Lee — Founder & Lead Strategist</h4>
+              <p>15+ years in software tech & systems. Leads every client engagement personally. Expert in local SEO, web strategy, and AI integration.</p>
+            </div>
+            <div class="team-card" style="border-color:var(--w06);">
+              <h4>Specialized AI Consultants</h4>
+              <p>A curated network of AI automation specialists who deploy and manage technical implementations — ensuring deep expertise on every project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-values">
+    <div class="container">
+      <span class="section-eyebrow rv">What We Stand For</span>
+      <div class="gold-rule rv"></div>
+      <h2 class="rv" style="font-size:clamp(24px,3vw,44px);">Our Values</h2>
+      <div class="values-grid">
+        <div class="values-row values-row-1">
+          <div class="value-card rv">
+            <svg class="val-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="22" cy="22" r="16"/>
+              <circle cx="22" cy="22" r="8"/>
+              <circle cx="22" cy="22" r="2" fill="#D5B129" stroke="none"/>
+              <line x1="22" y1="4" x2="22" y2="12"/>
+              <line x1="22" y1="32" x2="22" y2="40"/>
+              <line x1="4" y1="22" x2="12" y2="22"/>
+              <line x1="32" y1="22" x2="40" y2="22"/>
+            </svg>
+            <h3>Precision Over Volume</h3><p>We don't take on every client. We take on the right ones and do exceptional work.</p>
+          </div>
+          <div class="value-card rv d1">
+            <svg class="val-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 22c0 0 8-14 18-14s18 14 18 14-8 14-18 14S4 22 4 22z"/>
+              <circle cx="22" cy="22" r="5"/>
+              <circle cx="22" cy="22" r="2" fill="#D5B129" stroke="none"/>
+            </svg>
+            <h3>Transparency Always</h3><p>We tell you exactly what we're doing, why we're doing it, and what to expect.</p>
+          </div>
+          <div class="value-card rv d2">
+            <svg class="val-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="20" width="7" height="14" rx="1"/>
+              <rect x="18" y="12" width="7" height="22" rx="1"/>
+              <rect x="30" y="6" width="7" height="28" rx="1"/>
+              <line x1="4" y1="36" x2="40" y2="36"/>
+            </svg>
+            <h3>Results-Driven, Full Stop</h3><p>Vanity metrics don't pay your bills. Leads, calls, and revenue do. That's what we measure.</p>
+          </div>
+        </div>
+        <div class="values-row values-row-2">
+          <div class="value-card rv d3">
+            <svg class="val-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="13" y="13" width="18" height="18" rx="3"/>
+              <path d="M18 13V9M22 13V9M26 13V9M18 31v4M22 31v4M26 31v4M13 18H9M13 22H9M13 26H9M31 18h4M31 22h4M31 26h4"/>
+              <circle cx="22" cy="22" r="3"/>
+            </svg>
+            <h3>Technology as a Partner</h3><p>We believe AI and automation should work for you, not intimidate you. We make that a reality.</p>
+          </div>
+          <div class="value-card rv d4">
+            <svg class="val-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6,36 14,24 22,29 32,14"/>
+              <polyline points="28,14 32,14 32,18"/>
+              <line x1="4" y1="40" x2="40" y2="40"/>
+            </svg>
+            <h3>Active Elevation</h3><p>We don't just maintain. We push. We test. We optimize. We help you rise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-cta">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-eyebrow rv">Work With Us</span>
+        <h2 class="rv">Ready to See What Ascendify Can Do for Your Business?</h2>
+        <p class="rv" style="margin-top:20px;">Book a free Online Visibility Discovery Call and let's take an honest look at where you stand online — and what it will take to get you where you want to be.</p>
+        <div class="cta-btns rv">
+          <button class="btn btn-gold" onclick="goto('contact')">Book Your Free Discovery Call →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-lion-wrap"><img src="brand_assets/Lion-Gold.png" alt="Ascendify Solutions"></div>
+          <p class="footer-tagline">To cause something to rise. To elevate with intention.</p>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="goto('home')">Home</a></li><li><a onclick="goto('about')">About</a></li><li><a onclick="goto('services')">Services</a></li><li><a onclick="goto('contact')">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a onclick="goto('services');showSvc('website')">Website Design & SEO</a></li><li><a onclick="goto('services');showSvc('ai-search')">AI Search Visibility</a></li><li><a onclick="goto('services');showSvc('local-seo')">Local SEO & GBP</a></li><li><a onclick="goto('services');showSvc('content')">Content Strategy</a></li><li><a onclick="goto('services');showSvc('ai-automation')">AI Automation</a></li></ul></div>
+        <div class="footer-col"><h4>Get Started</h4><ul><li><a onclick="goto('contact')">Free Discovery Call</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Ascendify Solutions. All rights reserved. &nbsp;·&nbsp; <a onclick="goto('privacy')" style="color:var(--w30);text-decoration:none;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--w30)'">Privacy Policy</a></p><p>Built to Elevate. Wired to Win.</p></div>
+    </div>
+  </footer>
+</div><!-- /page-about -->
+
+
+<!-- ═══════════════════════════════════════════
+     SERVICES PAGE
+═══════════════════════════════════════════ -->
+<div class="page" id="page-services">
+
+  <section class="page-hero">
+    <img class="hero-lion-bg" src="brand_assets/Lion-Gold.png" alt="">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-eyebrow">What We Do</span>
+        <div class="gold-rule"></div>
+        <h1>Every Service Exists for One Reason: <span class="gold">More Leads for Your Business.</span></h1>
+        <p>A lot of agencies will sell you a website. Or SEO. Or social media management. All as standalone solutions. The problem is — they're not standalone. Online visibility is an ecosystem, and every piece has to work together.</p>
+        <p style="margin-top:14px;">At Ascendify, we design and manage the complete digital infrastructure your business needs to get found, get clicks, and get customers. We provide custom quotes based on your needs — no bloated packages, no filler.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <div id="svc-overview">
+    <section class="s-services-overview">
+      <div class="container">
+        <span class="section-eyebrow rv">Our Offerings</span>
+        <div class="gold-rule rv"></div>
+        <h2 class="rv" style="font-size:clamp(24px,3vw,44px);margin-bottom:52px;">Services That Move The Needle</h2>
+        <div class="svc-grid">
+          <div class="svc-card rv" onclick="showSvc('website')">
+
+            <svg class="svc-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="8" width="36" height="28" rx="3"/>
+              <path d="M4 15h36"/>
+              <circle cx="10" cy="11.5" r="1" fill="#D5B129" stroke="none"/>
+              <circle cx="15" cy="11.5" r="1" fill="#D5B129" stroke="none"/>
+              <circle cx="20" cy="11.5" r="1" fill="#D5B129" stroke="none"/>
+              <path d="M12 24l4 4 10-10"/>
+            </svg>
+            <h3>Custom Website Design & SEO</h3>
+            <p>Sites engineered to rank on Google, get discovered by AI search, and convert visitors into paying customers. Built for speed, mobile, and accessibility.</p>
+            <span class="svc-link">Learn More →</span>
+          </div>
+          <div class="svc-card rv d1" onclick="showSvc('ai-search')">
+            <svg class="svc-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="22" cy="10" r="4"/>
+              <path d="M22 14v4"/>
+              <rect x="10" y="18" width="24" height="16" rx="3"/>
+              <path d="M16 18v-2M28 18v-2"/>
+              <circle cx="17" cy="26" r="2"/>
+              <circle cx="27" cy="26" r="2"/>
+              <path d="M19 30h6"/>
+              <path d="M6 24h4M34 24h4"/>
+            </svg>
+            <h3>AI-Optimized Search Visibility</h3>
+            <p>Be found by ChatGPT, Perplexity, and Google AI Overviews. We structure your presence for the new AI-powered search landscape before your competition does.</p>
+            <span class="svc-link">Learn More →</span>
+          </div>
+          <div class="svc-card rv d2" onclick="showSvc('local-seo')">
+
+            <svg class="svc-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 4C16.477 4 12 8.477 12 14c0 8.5 10 22 10 22s10-13.5 10-22c0-5.523-4.477-10-10-10z"/>
+              <circle cx="22" cy="14" r="4"/>
+            </svg>
+            <h3>Local SEO & Google Business Profile</h3>
+            <p>Dominate your local market. We've taken businesses from invisible to #1 in the Google Maps pack — driving real calls, clicks, and foot traffic.</p>
+            <span class="svc-link">Learn More →</span>
+          </div>
+          <div class="svc-card rv" onclick="showSvc('content')">
+
+            <svg class="svc-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M26 6H12a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V16L26 6z"/>
+              <path d="M26 6v10h10"/>
+              <path d="M16 22h12M16 27h8"/>
+            </svg>
+            <h3>Content Creation & Strategy</h3>
+            <p>Strategic, keyword-rich content that positions you as the authority in your market. We write it, optimize it, and manage it so you focus on running your business.</p>
+            <span class="svc-link">Learn More →</span>
+          </div>
+          <div class="svc-card rv d1" onclick="showSvc('ai-automation')">
+
+            <svg class="svc-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4L10 24h12l-2 16 18-22H26L24 4z"/>
+            </svg>
+            <h3>AI Automation & Business Integration</h3>
+            <p>Put AI to work in your business. We identify the specific workflows where AI creates the most leverage and implement it cleanly and practically.</p>
+            <span class="svc-link">Learn More →</span>
+          </div>
+          <div class="svc-card svc-cta-card rv d2" onclick="goto('contact')">
+            <svg style="width:44px;height:44px;margin-bottom:16px;display:block;" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M38 22c0 8.284-7.163 15-16 15a17.1 17.1 0 0 1-6.447-1.24L6 38l2.432-8.153A13.8 13.8 0 0 1 6 22C6 13.716 13.163 7 22 7s16 6.716 16 15z"/>
+              <path d="M16 20h12M16 25h8"/>
+            </svg>
+            <h3 style="color:var(--gold)">Not Sure Where to Start?</h3>
+            <p>Book a free Discovery Call. We'll tell you exactly which services will move the needle most for your specific situation.</p>
+            <span class="svc-link" style="margin-top:auto;">Book a Free Call →</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Detail section (shown when service is clicked) -->
+  <div id="svc-detail" style="display:none;">
+    <section class="svc-detail-section">
+      <div class="container">
+        <span class="svc-back" onclick="hideSvc()">← Back to All Services</span>
+        <div id="svc-detail-inner"></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="s-cta">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-eyebrow">Get Started</span>
+        <h2>Not Sure Which Service You Need? Let's Figure It Out Together.</h2>
+        <p style="margin-top:20px;">Book a free Online Visibility Discovery Call and we'll review your current digital setup, identify your biggest growth opportunities, and recommend the specific services that will have the most impact for your business right now.</p>
+        <p>No fluff. No upselling. Just an honest assessment and a clear path forward.</p>
+        <div class="cta-btns">
+          <button class="btn btn-gold" onclick="goto('contact')">Book My Free Discovery Call →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-lion-wrap"><img src="brand_assets/Lion-Gold.png" alt="Ascendify Solutions"></div><p class="footer-tagline">To cause something to rise. To elevate with intention.</p></div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="goto('home')">Home</a></li><li><a onclick="goto('about')">About</a></li><li><a onclick="goto('services')">Services</a></li><li><a onclick="goto('contact')">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a onclick="goto('services');showSvc('website')">Website Design & SEO</a></li><li><a onclick="goto('services');showSvc('ai-search')">AI Search Visibility</a></li><li><a onclick="goto('services');showSvc('local-seo')">Local SEO & GBP</a></li><li><a onclick="goto('services');showSvc('content')">Content Strategy</a></li><li><a onclick="goto('services');showSvc('ai-automation')">AI Automation</a></li></ul></div>
+        <div class="footer-col"><h4>Get Started</h4><ul><li><a onclick="goto('contact')">Free Discovery Call</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Ascendify Solutions. All rights reserved. &nbsp;·&nbsp; <a onclick="goto('privacy')" style="color:var(--w30);text-decoration:none;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--w30)'">Privacy Policy</a></p><p>Built to Elevate. Wired to Win.</p></div>
+    </div>
+  </footer>
+</div><!-- /page-services -->
+
+
+<!-- ═══════════════════════════════════════════
+     CONTACT PAGE
+═══════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+
+  <section class="s-contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="svc-back" style="display:block;" onclick="history.back()">← Back</span>
+          <span class="section-eyebrow">Free Discovery Call</span>
+          <div class="gold-rule" style="margin-bottom:28px;"></div>
+          <h2>Let's Take an Honest Look at Your Online Presence.</h2>
+          <p style="margin-top:18px;">Book a free Online Visibility Discovery Call and in 60 minutes, we'll review your current digital setup, identify exactly where you're losing visibility, and give you a clear picture of what it will take to start winning online.</p>
+          <div class="contact-perks">
+            <div class="perk">No commitment. No sales pitch.</div>
+            <div class="perk">Honest audit of your current digital presence.</div>
+            <div class="perk">Clear path forward — whether you work with us or not.</div>
+            <div class="perk">60-minute call. Zero pressure.</div>
+          </div>
+          <div class="scope-box">
+            <h4>What We'll Cover</h4>
+            <ul>
+              <li><span>→</span> Review your current website and SEO standing</li>
+              <li><span>→</span> Audit your Google Business Profile</li>
+              <li><span>→</span> Identify your biggest visibility gaps</li>
+              <li><span>→</span> Recommend your highest-impact next steps</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;">
+          <div class="contact-form-box">
+            <h1 style="color:var(--gold);">Book Your Free Discovery Call</h1>
+            <p class="form-sub">Fill out the form and we'll be in touch within 24 hours to schedule your call.</p>
+            <form id="discoveryForm" onsubmit="submitForm(event)">
+              <div class="form-row">
+                <div class="form-group"><label>First Name *</label><input name="first_name" type="text" placeholder="John" required></div>
+                <div class="form-group"><label>Last Name *</label><input name="last_name" type="text" placeholder="Smith" required></div>
+              </div>
+              <div class="form-group"><label>Business Email *</label><input name="email" type="email" placeholder="john@yourbusiness.com" required></div>
+              <div class="form-group"><label>Phone Number</label><input name="phone" type="tel" placeholder="(555) 000-0000"></div>
+              <div class="form-group"><label>Business Name *</label><input name="business_name" type="text" placeholder="Your Business Name" required></div>
+              <div class="form-group">
+                <label>Business Industry</label>
+                <select name="industry">
+                  <option value="">Select your industry...</option>
+                  <option>Home Services</option>
+                  <option>Auto Services</option>
+                  <option>Health & Wellness</option>
+                  <option>Restaurant / Food</option>
+                  <option>Retail</option>
+                  <option>Professional Services</option>
+                  <option>Real Estate</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Your Biggest Challenge Right Now *</label>
+                <textarea name="challenge" placeholder="Tell us briefly where you're struggling online — visibility, lead generation, your website, or something else entirely." required></textarea>
+              </div>
+              <div class="form-btn-wrap">
+                <button type="submit" class="btn btn-gold">Submit — Let's Talk →</button>
+              </div>
+              <p class="form-note" style="font-size:12px;">This discovery call is a no-pressure conversation — not a commitment or consulting engagement. Any next steps are entirely at your discretion. Ascendify Solutions makes no guarantees of specific outcomes or implementation from this session.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-lion-wrap"><img src="brand_assets/Lion-Gold.png" alt="Ascendify Solutions"></div><p class="footer-tagline">To cause something to rise. To elevate with intention.</p></div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="goto('home')">Home</a></li><li><a onclick="goto('about')">About</a></li><li><a onclick="goto('services')">Services</a></li><li><a onclick="goto('contact')">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a onclick="goto('services');showSvc('website')">Website Design & SEO</a></li><li><a onclick="goto('services');showSvc('ai-search')">AI Search Visibility</a></li><li><a onclick="goto('services');showSvc('local-seo')">Local SEO & GBP</a></li><li><a onclick="goto('services');showSvc('content')">Content Strategy</a></li><li><a onclick="goto('services');showSvc('ai-automation')">AI Automation</a></li></ul></div>
+        <div class="footer-col"><h4>Get Started</h4><ul><li><a onclick="goto('contact')">Free Discovery Call</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Ascendify Solutions. All rights reserved. &nbsp;·&nbsp; <a onclick="goto('privacy')" style="color:var(--w30);text-decoration:none;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--w30)'">Privacy Policy</a></p><p>Built to Elevate. Wired to Win.</p></div>
+    </div>
+  </footer>
+</div><!-- /page-contact -->
+
+<!-- ═══════════════════════════════════════════
+     PRIVACY POLICY PAGE
+═══════════════════════════════════════════ -->
+<div class="page" id="page-privacy">
+
+  <section class="page-hero">
+    <img class="hero-lion-bg" src="brand_assets/Lion-Gold.png" alt="">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-eyebrow">Legal</span>
+        <div class="gold-rule"></div>
+        <h1>Privacy <span class="gold">Policy</span></h1>
+        <p>This Privacy Policy describes how Ascendify Solutions collects, uses, and protects your information when you visit our website or submit a discovery call request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="privacy-wrap">
+
+        <div class="privacy-last-updated">
+          <strong>Effective Date:</strong> March 13, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> March 13, 2026<br>
+          Ascendify Solutions is committed to protecting your privacy. Please read this policy carefully before submitting any information to us.
+        </div>
+
+        <div class="privacy-section">
+          <h3>1. Who We Are</h3>
+          <p>Ascendify Solutions is a digital marketing agency providing website design, search engine optimization (SEO), AI search visibility, local SEO and Google Business Profile management, content strategy, and AI automation services to small and mid-size businesses.</p>
+          <p>This website is operated by Samuel Lee, Founder of Ascendify Solutions. References to <strong>"Ascendify Solutions," "we," "us,"</strong> or <strong>"our"</strong> in this policy refer to this business and its operator.</p>
+          <p>For privacy-related inquiries, you may contact us at: <a href="mailto:ascendify.marketingsolutions@gmail.com">ascendify.marketingsolutions@gmail.com</a></p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>2. Information We Collect</h3>
+          <p><strong>Information You Provide Directly</strong></p>
+          <p>When you submit our Discovery Call request form, we collect the following information:</p>
+          <ul>
+            <li>First and last name</li>
+            <li>Business email address</li>
+            <li>Phone number (optional)</li>
+            <li>Business name</li>
+            <li>Business industry</li>
+            <li>A description of your current online marketing challenges or goals</li>
+          </ul>
+          <p>This information is submitted voluntarily by you and is used solely to respond to your inquiry and schedule your discovery call.</p>
+          <p><strong>Information Collected Automatically</strong></p>
+          <p>When you visit this website, your browser may automatically transmit certain technical information, including:</p>
+          <ul>
+            <li>IP address and approximate geographic location</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Pages visited and time spent on each page</li>
+            <li>Referring URL (the page that directed you to our site)</li>
+            <li>Date and time of your visit</li>
+          </ul>
+          <p>This data is used for general website administration and to understand how visitors interact with our content. It is not linked to any personally identifiable information unless you have submitted a form.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>3. How We Use Your Information</h3>
+          <p>We use the information we collect for the following purposes:</p>
+          <ul>
+            <li>To respond to your discovery call request and schedule a consultation</li>
+            <li>To communicate with you about our services, pricing, and your business needs</li>
+            <li>To send follow-up information relevant to our conversation or your inquiry</li>
+            <li>To improve our website content, user experience, and service offerings</li>
+            <li>To comply with applicable legal obligations</li>
+          </ul>
+          <p>We do not use your information for automated decision-making or profiling. We do not sell, rent, or trade your personal information to any third party for their marketing purposes.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>4. Third-Party Service Providers</h3>
+          <p>We use the following third-party services to operate our website and process form submissions:</p>
+          <p><strong>EmailJS</strong> — We use EmailJS (emailjs.com) to transmit discovery call form submissions to our inbox. When you submit the contact form, your form data is processed through EmailJS's servers before being delivered to us via email. EmailJS acts as a data processor on our behalf. Their privacy policy is available at <a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener">emailjs.com/legal/privacy-policy</a>.</p>
+          <p>These service providers are contractually obligated to use your data only as necessary to provide services to us, and are not permitted to use it for their own independent purposes.</p>
+          <p>We do not currently use third-party advertising networks, behavioral tracking pixels, or social media tracking on this website.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>5. Cookies and Tracking Technologies</h3>
+          <p>Our website may use browser cookies and similar technologies for functional purposes, including:</p>
+          <ul>
+            <li>Maintaining session state as you navigate between pages</li>
+            <li>Remembering form input during an active session</li>
+            <li>Enabling basic website functionality</li>
+          </ul>
+          <p>We do not use advertising cookies, cross-site tracking cookies, or third-party analytics cookies (such as Google Analytics) at this time. You may configure your browser to refuse cookies or alert you when cookies are being sent. Disabling cookies may affect certain functionality of this website.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>6. Data Sharing and Disclosure</h3>
+          <p>We do not sell, rent, or share your personal information with third parties except in the following limited circumstances:</p>
+          <ul>
+            <li><strong>Service Providers:</strong> As described in Section 4, we share data with service providers (such as EmailJS) strictly to operate our website and deliver your inquiry to us.</li>
+            <li><strong>Legal Compliance:</strong> We may disclose your information if required to do so by law, court order, or government regulation, or if we believe disclosure is necessary to protect our rights, your safety, or the safety of others.</li>
+            <li><strong>Business Transfer:</strong> In the event of a merger, acquisition, or sale of all or a portion of our business assets, your information may be transferred as part of that transaction. We will notify you via email or prominent website notice before your information becomes subject to a different privacy policy.</li>
+          </ul>
+        </div>
+
+        <div class="privacy-section">
+          <h3>7. Data Retention</h3>
+          <p>We retain your personal information for as long as is reasonably necessary to:</p>
+          <ul>
+            <li>Fulfill the purpose for which it was collected (i.e., to conduct your discovery call and any follow-up communications)</li>
+            <li>Maintain records of business communications</li>
+            <li>Comply with applicable legal, accounting, or reporting obligations</li>
+          </ul>
+          <p>If you do not become a client, we generally retain inquiry information for no longer than 24 months. If you would like your information deleted sooner, please contact us at <a href="mailto:ascendify.marketingsolutions@gmail.com">ascendify.marketingsolutions@gmail.com</a> and we will honor your request within 30 days.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>8. Your Privacy Rights</h3>
+          <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+          <ul>
+            <li><strong>Right to Access:</strong> Request a copy of the personal information we hold about you.</li>
+            <li><strong>Right to Correction:</strong> Request that we correct inaccurate or incomplete information.</li>
+            <li><strong>Right to Deletion:</strong> Request that we delete your personal information, subject to certain legal exceptions.</li>
+            <li><strong>Right to Opt Out:</strong> Opt out of any future marketing communications from us at any time by replying "unsubscribe" to any email we send, or by contacting us directly.</li>
+            <li><strong>California Residents (CCPA):</strong> If you are a California resident, you have additional rights under the California Consumer Privacy Act, including the right to know what personal information is collected, the right to request deletion, and the right to non-discrimination for exercising your privacy rights. We do not sell personal information as defined under the CCPA.</li>
+          </ul>
+          <p>To exercise any of these rights, contact us at <a href="mailto:ascendify.marketingsolutions@gmail.com">ascendify.marketingsolutions@gmail.com</a>. We will respond to verifiable requests within 30 days.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>9. Data Security</h3>
+          <p>We take reasonable technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. These measures include the use of secure HTTPS connections for data transmission and limiting access to form submission data to authorized personnel only.</p>
+          <p>However, no method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your personal information, we cannot guarantee its absolute security. By using our website and submitting information through our forms, you acknowledge and accept this inherent risk.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>10. Children's Privacy</h3>
+          <p>Our website and services are intended for business owners and professionals. We do not knowingly collect personal information from individuals under the age of 13. If you believe that a minor has submitted personal information to us, please contact us immediately at <a href="mailto:ascendify.marketingsolutions@gmail.com">ascendify.marketingsolutions@gmail.com</a> and we will take steps to delete such information promptly.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>11. External Links</h3>
+          <p>Our website may contain links to third-party websites or resources for your reference. These links are provided for informational purposes only. We have no control over the content, privacy practices, or security of third-party sites and are not responsible for their privacy policies or practices. We encourage you to review the privacy policy of any third-party website you visit.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>12. Changes to This Policy</h3>
+          <p>We reserve the right to update or modify this Privacy Policy at any time. When we make material changes, we will update the "Last Updated" date at the top of this page. We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+          <p>Your continued use of this website after any changes to this policy constitutes your acceptance of the updated terms.</p>
+        </div>
+
+        <div class="privacy-section">
+          <h3>13. Contact Us</h3>
+          <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal information, please contact us:</p>
+          <ul>
+            <li><strong>Business:</strong> Ascendify Solutions</li>
+            <li><strong>Owner:</strong> Samuel Lee, Founder</li>
+            <li><strong>Email:</strong> <a href="mailto:ascendify.marketingsolutions@gmail.com">ascendify.marketingsolutions@gmail.com</a></li>
+            <li><strong>Website:</strong> ascendifysolutions.com</li>
+          </ul>
+          <p>We will respond to all privacy-related inquiries within 30 business days.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-lion-wrap"><img src="brand_assets/Lion-Gold.png" alt="Ascendify Solutions"></div><p class="footer-tagline">To cause something to rise. To elevate with intention.</p></div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a onclick="goto('home')">Home</a></li><li><a onclick="goto('about')">About</a></li><li><a onclick="goto('services')">Services</a></li><li><a onclick="goto('contact')">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a onclick="goto('services');showSvc('website')">Website Design & SEO</a></li><li><a onclick="goto('services');showSvc('ai-search')">AI Search Visibility</a></li><li><a onclick="goto('services');showSvc('local-seo')">Local SEO & GBP</a></li><li><a onclick="goto('services');showSvc('content')">Content Strategy</a></li><li><a onclick="goto('services');showSvc('ai-automation')">AI Automation</a></li></ul></div>
+        <div class="footer-col"><h4>Get Started</h4><ul><li><a onclick="goto('contact')">Free Discovery Call</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© 2025 Ascendify Solutions. All rights reserved. &nbsp;·&nbsp; <a onclick="goto('privacy')" style="color:var(--w30);text-decoration:none;cursor:pointer;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--w30)'">Privacy Policy</a></p><p>Built to Elevate. Wired to Win.</p></div>
+    </div>
+  </footer>
+</div><!-- /page-privacy -->
+
+
+<!-- THANK YOU MODAL -->
+<div class="ty-modal" id="tyModal">
+  <div class="ty-box">
+    <img src="brand_assets/Lion-Gold.png" alt="Ascendify Solutions">
+    <h2>You're on Your Way Up.</h2>
+    <p>We've received your request and will be in touch within 24 hours to schedule your free Online Visibility Discovery Call. Check your inbox soon.</p>
+    <button class="btn btn-gold" onclick="closeModal()">Back to Home</button>
+  </div>
+</div>
+
+
+<script>
+/* ─── SERVICE DATA ─── */
+const SVC = {
+  'website': {
+    icon: `<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="36" height="28" rx="3"/><path d="M4 15h36"/><circle cx="10" cy="11.5" r="1" fill="#D5B129" stroke="none"/><circle cx="15" cy="11.5" r="1" fill="#D5B129" stroke="none"/><circle cx="20" cy="11.5" r="1" fill="#D5B129" stroke="none"/><path d="M12 24l4 4 10-10"/></svg>`,
+    title: 'Custom Website Design & SEO',
+    lead: "Your website is the foundation of everything. It's your 24/7 salesperson, your credibility signal, your lead generation engine. If it's not built right, nothing else you do online will perform the way it should.",
+    body: "We build custom websites that are not template-dragged into existence — they're precision-engineered from the ground up. Every site we deliver is QA-tested like software and deployed only when it performs.",
+    features: [
+      "Engineered to meet Google's Core Web Vitals and ranking guidelines",
+      "Structured for AI search engine visibility (ChatGPT, Perplexity, Google AI Overviews)",
+      "Designed to convert — turning visitors into leads, calls, and customers",
+      "Built for speed, mobile performance, and accessibility",
+      "Backed by keyword research, on-page SEO, and technical optimization from day one",
+      "QA-tested like software before every launch — because it is software"
+    ],
+    callout: "What makes ours different? Every site we build is QA-tested like software — because it is software. We don't ship until it performs.",
+    proof: null
+  },
+  'ai-search': {
+    icon: `<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="10" r="4"/><path d="M22 14v4"/><rect x="10" y="18" width="24" height="16" rx="3"/><path d="M16 18v-2M28 18v-2"/><circle cx="17" cy="26" r="2"/><circle cx="27" cy="26" r="2"/><path d="M19 30h6"/><path d="M6 24h4M34 24h4"/></svg>`,
+    title: 'AI-Optimized Search Visibility',
+    lead: "Search has changed. It's no longer just about Google ranking. With AI-powered search engines like ChatGPT, Perplexity, and Google's Gemini AI Overviews now shaping how people discover businesses, being invisible to AI is just as costly as being invisible to Google.",
+    body: "Most agencies aren't building for this yet. We are. And that puts our clients ahead of the curve before their competition even realizes the landscape has shifted.",
+    features: [
+      "Structuring your website content so AI models can understand, cite, and surface it",
+      "Building authoritative content that AI search engines reference as trusted sources",
+      "Implementing schema markup and structured data that improves both traditional and AI search visibility",
+      "Monitoring AI search trends and proactively adapting your strategy",
+      "Ensuring your business appears when users query AI assistants for recommendations in your category"
+    ],
+    callout: "Most agencies aren't building for this yet. We are. And that puts our clients ahead of the curve.",
+    proof: null
+  },
+  'local-seo': {
+    icon: `<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4C16.477 4 12 8.477 12 14c0 8.5 10 22 10 22s10-13.5 10-22c0-5.523-4.477-10-10-10z"/><circle cx="22" cy="14" r="4"/></svg>`,
+    title: 'Local SEO & Google Business Profile Management',
+    lead: "If your business serves local customers, your Google Business Profile is the most powerful (and most underutilized) asset you have. When it's fully optimized, it drives calls, directions, website visits, and real leads — without paying for ads.",
+    body: "We've taken local businesses from invisible to #1 in the Google Maps pack. Here's our proven process:",
+    features: [
+      "Complete Google Business Profile audit and optimization",
+      "Category, keyword, and service area optimization",
+      "Ongoing post management and review strategy",
+      "Local citation building and NAP consistency across directories",
+      "Location-specific landing page creation and optimization",
+      "Monthly performance reporting and strategy refinement"
+    ],
+    callout: null,
+    proof: "One of our clients in the mobile auto detailing space now holds the #1 position in Google Maps for their target service area, with 1,500+ verified five-star reviews. That's the power of a fully managed local SEO strategy done right."
+  },
+  'content': {
+    icon: `<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M26 6H12a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V16L26 6z"/><path d="M26 6v10h10"/><path d="M16 22h12M16 27h8"/></svg>`,
+    title: 'Content Creation & Strategy',
+    lead: "Content is what tells Google — and your customers — that you know what you're doing. Without it, even a well-built website will sit dormant. With the right content strategy, your website becomes a lead magnet.",
+    body: "Every piece of content we produce is written with two audiences in mind: the search engines that need to rank it, and the humans who need to convert from it. We don't create content for the sake of it — we create content that earns traffic and converts it.",
+    features: [
+      "SEO-optimized website copy and landing pages",
+      "Blog articles targeting high-intent local and industry keywords",
+      "Google Business Profile posts and update management",
+      "Email newsletters and lead nurture content",
+      "Service page rewrites and conversion optimization",
+      "Content calendars and long-term editorial strategy"
+    ],
+    callout: "Every piece of content we produce is written with two audiences in mind: the search engines that need to rank it, and the humans who need to convert from it.",
+    proof: null
+  },
+  'ai-automation': {
+    icon: `<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L10 24h12l-2 16 18-22H26L24 4z"/></svg>`,
+    title: 'AI Automation & Business Integration',
+    lead: "AI is no longer a future technology. It's available right now, and businesses that integrate it into their operations today are building a compounding advantage over everyone still doing things manually.",
+    body: "We don't believe in automating for the sake of it. We identify the specific workflows in your business where AI creates the most leverage — and then we implement it cleanly and practically. You don't need to be a tech expert. That's our job.",
+    features: [
+      "Automated lead follow-up and nurture sequences",
+      "AI-powered customer communication and response systems",
+      "Appointment scheduling and confirmation workflows",
+      "Review generation and reputation management automations",
+      "Reporting and performance dashboard integrations",
+      "Staff training and ongoing system support"
+    ],
+    callout: "You don't need to be a tech expert to benefit from AI. That's our job. Our role is to be your technology partner — to demystify the tools, implement them correctly, and make sure your team can use them with confidence.",
+    proof: null
+  }
+};
+
+/* ─── SEO META MAP ─── */
+const PAGE_META = {
+  home:     { title: 'Digital Marketing Agency for SMBs | Ascendify Solutions',       desc: 'We help small & mid-size businesses get found online, generate more leads, and compete in the digital space with custom SEO websites, local SEO & AI automation.' },
+  about:    { title: 'About Ascendify Solutions | About',                desc: 'Meet Samuel Lee — 15+ years in tech, now helping small businesses rise online through precision digital strategy, local SEO, and AI-powered marketing.' },
+  services: { title: 'Digital Marketing Services | Ascendify Solutions',              desc: 'Custom SEO websites, local search optimization, AI automation, and content strategy — the complete digital ecosystem built for small and mid-size business growth.' },
+  contact:  { title: 'Book a Free Discovery Call | Ascendify Solutions',              desc: 'Get a free Online Visibility Discovery Call with Ascendify Solutions. We\'ll review your digital setup and map out exactly what it takes to grow your business online.' },
+  privacy:  { title: 'Privacy Policy | Ascendify Solutions',                          desc: 'Read the Ascendify Solutions Privacy Policy to understand how we collect, use, and protect your personal information.' }
+};
+
+const SVC_META = {
+  'website':     { title: 'Custom SEO Website Design for Small Businesses',           desc: 'We build websites engineered to rank on Google and get discovered by AI search engines — turning visitors into real leads for your business nationwide.' },
+  'ai-search':   { title: 'AI-Optimized Search Visibility | Ascendify Solutions',     desc: 'Be found by ChatGPT, Perplexity & Google AI Overviews. We structure your online presence for the new AI-powered search landscape before your competition does.' },
+  'local-seo':   { title: 'Local SEO & Google Business Profile Management',           desc: 'Dominate your local market with expert Google Business Profile optimization and local SEO strategies that drive real calls, clicks, and foot traffic.' },
+  'content':     { title: 'Content Creation & SEO Strategy | Ascendify Solutions',    desc: 'Strategic, keyword-rich content that builds authority, ranks on Google, and converts visitors into leads. Written for search engines and real humans alike.' },
+  'ai-automation': { title: 'AI Automation Services for Small Businesses',            desc: 'Put AI to work in your business. Ascendify helps SMBs automate lead follow-up, customer communication, and more — so you can scale without burning out.' }
+};
+
+function setMeta(title, desc) {
+  document.title = title;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', desc);
+}
+
+/* ─── URL SLUG MAP ─── */
+const PAGE_SLUG = {
+  home:     '/',
+  about:    '/about',
+  services: '/services',
+  contact:  '/discovery',
+  privacy:  '/privacy'
+};
+const SLUG_PAGE = {
+  '/':          'home',
+  '/about':     'about',
+  '/services':  'services',
+  '/discovery': 'contact',
+  '/privacy':   'privacy'
+};
+
+/* ─── PAGE ROUTING ─── */
+function goto(page, pushState = true) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById('page-' + page);
+  if (el) el.classList.add('active');
+
+  document.querySelectorAll('.nav-links a[data-page]').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === page);
+  });
+
+  if (PAGE_META[page]) setMeta(PAGE_META[page].title, PAGE_META[page].desc);
+
+  if (pushState && PAGE_SLUG[page]) {
+    history.pushState({ page }, '', PAGE_SLUG[page]);
+  }
+
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0);
+  setTimeout(initReveal, 80);
+
+  if (page === 'home') setTimeout(initCounters, 200);
+}
+
+/* ─── HANDLE BROWSER BACK/FORWARD ─── */
+window.addEventListener('popstate', (e) => {
+  const page = (e.state && e.state.page) || SLUG_PAGE[location.pathname] || 'home';
+  goto(page, false);
+});
+
+/* ─── MOBILE MENU ─── */
+function toggleMenu() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+/* ─── SERVICE DETAIL ─── */
+function showSvc(id) {
+  const s = SVC[id];
+  if (!s) return;
+  if (SVC_META[id]) setMeta(SVC_META[id].title, SVC_META[id].desc);
+
+  const inner = document.getElementById('svc-detail-inner');
+  inner.innerHTML = `
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+      <span style="width:52px;height:52px;flex-shrink:0;display:block;">${s.icon.replace('viewBox', 'style="width:52px;height:52px;" viewBox')}</span>
+      <h1 style="font-size:clamp(22px,3vw,46px);">${s.title}</h1>
+    </div>
+    <div class="gold-rule" style="margin-bottom:36px;"></div>
+    <div class="svc-detail-grid">
+      <div class="svc-detail-body">
+        <p style="margin-bottom:22px;">${s.lead}</p>
+        <p>${s.body}</p>
+        <h3 style="font-family:'Exo2',sans-serif;font-size:12px;color:var(--gold);letter-spacing:0.16em;text-transform:uppercase;margin:24px 0 16px;">What's Included</h3>
+        <ul class="feat-list">${s.features.map(f=>`<li>${f}</li>`).join('')}</ul>
+        ${s.callout ? `<div class="problem-callout" style="margin-top:28px;"><p>${s.callout}</p></div>` : ''}
+        ${s.proof ? `<div class="proof-box"><strong>Proven Result</strong><p>${s.proof}</p></div>` : ''}
+      </div>
+      <div>
+        <div class="sidebar-box">
+          <h3>Ready to Get Started?</h3>
+          <p>Book a free Online Visibility Discovery Call. We'll review your situation and tell you exactly how this service can move the needle for your business.</p>
+          <button class="btn btn-gold" onclick="goto('contact')">Book a Free Call →</button>
+          <p style="margin-top:14px;font-size:16px;color:var(--w30);text-align:center;letter-spacing:0.04em;">No commitment. No pressure.</p>
+        </div>
+      </div>
+    </div>`;
+
+  document.getElementById('svc-overview').style.display = 'none';
+  document.getElementById('svc-detail').style.display = 'block';
+  setTimeout(() => {
+    const backBtn = document.querySelector('.svc-back');
+    if (backBtn) {
+      const top = backBtn.getBoundingClientRect().top + window.scrollY - 102;
+      window.scrollTo({ top, left: 0, behavior: 'instant' });
+    }
+  }, 0);
+}
+
+function hideSvc() {
+  document.getElementById('svc-overview').style.display = 'block';
+  document.getElementById('svc-detail').style.display = 'none';
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }), 0);
+  setTimeout(initReveal, 80);
+}
+
+/* ─── FORM ─── */
+function submitForm(e) {
+  e.preventDefault();
+  const form = document.getElementById('discoveryForm');
+  const f = (name) => form.querySelector(`[name="${name}"]`).value.trim();
+
+  const now = new Date();
+  const submitted_at = now.toLocaleString('en-US', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+    hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short'
+  });
+
+  const templateParams = {
+    submitted_at,
+    first_name:    f('first_name'),
+    last_name:     f('last_name'),
+    email:         f('email'),
+    phone:         f('phone') || 'Not provided',
+    business_name: f('business_name'),
+    industry:      f('industry') || 'Not selected',
+    challenge:     f('challenge')
+  };
+
+  emailjs.send('service_b6g8aof', 'template_ulzjaqp', templateParams)
+    .then(() => {
+      document.getElementById('tyModal').classList.add('open');
+      form.reset();
+    })
+    .catch((err) => {
+      console.error('EmailJS error:', err);
+      document.getElementById('tyModal').classList.add('open');
+      form.reset();
+    });
+}
+function closeModal() {
+  document.getElementById('tyModal').classList.remove('open');
+  goto('home');
+}
+
+/* ─── SCROLL REVEAL ─── */
+function initReveal() {
+  const els = document.querySelectorAll('.page.active .rv');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(el => obs.observe(el));
+}
+
+/* ─── COUNTER ANIMATION ─── */
+function initCounters() {
+  document.querySelectorAll('.page.active .stat-n[data-count]').forEach(el => {
+    const target = +el.dataset.count;
+    const suffix = el.dataset.suffix || '';
+    const dur = 1800, steps = 55;
+    let current = 0;
+    const inc = target / steps;
+    const t = setInterval(() => {
+      current = Math.min(current + inc, target);
+      el.textContent = Math.floor(current).toLocaleString() + suffix;
+      if (current >= target) clearInterval(t);
+    }, dur / steps);
+  });
+}
+
+/* ─── NAV SCROLL ─── */
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', scrollY > 20);
+});
+
+/* ─── STATS OBSERVER ─── */
+const statsObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { initCounters(); statsObs.disconnect(); } });
+}, { threshold: 0.25 });
+
+/* ─── INIT ─── */
+document.addEventListener('DOMContentLoaded', () => {
+  const initialPage = SLUG_PAGE[location.pathname] || 'home';
+  goto(initialPage, false);
+  history.replaceState({ page: initialPage }, '', PAGE_SLUG[initialPage] || '/');
+  const s = document.querySelector('.s-stats');
+  if (s) statsObs.observe(s);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Dev tools (local only)
+temporary screenshots/
+screenshot.mjs
+serve.mjs
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Claude internal
+CLAUDE.md
+
+# Confidential business documents
+brand_assets/Ascendify Solutions Website Content Strategy.pdf
+brand_assets/AscendifySolutions - BrandGuide.pdf
