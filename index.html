@@ -156,7 +156,7 @@
 
     .mobile-nav {
       display: none; position: fixed;
-      top: 116px; left: 0; right: 0; z-index: 190;
+      top: 152px; left: 0; right: 0; z-index: 190;
       background: rgba(30,29,47,0.98); backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(213,177,41,0.12);
       flex-direction: column; gap: 0;
@@ -398,7 +398,10 @@
     .why-header h2 { font-size: clamp(28px, 3.8vw, 52px); margin-bottom: 16px; }
     .why-header p { font-size: 20px; color: var(--w70); }
 
-    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .benefits-grid { display: flex; flex-direction: column; gap: 22px; }
+    .benefits-row { display: grid; gap: 22px; }
+    .benefits-row-1 { grid-template-columns: repeat(3, 1fr); }
+    .benefits-row-2 { grid-template-columns: repeat(2, 1fr); width: calc(66.66% + 6px); margin: 0 auto; }
     .benefit {
       padding: 32px 28px; border-radius: 8px;
       background: var(--w03); border: 1px solid var(--w06);
@@ -733,7 +736,7 @@
       border-radius: 6px; padding: 18px 22px; margin-top: 24px;
     }
     .proof-box strong {
-      display: block; font-family: 'Exo2', sans-serif; font-size: 10px;
+      display: block; font-family: 'Exo2', sans-serif; font-size: 14px;
       color: var(--gold); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 7px;
     }
     .proof-box p { font-family: 'Montserrat', sans-serif !important; font-size: 18px !important; color: var(--w70) !important; margin: 0 !important; line-height: 1.6 !important; }
@@ -829,7 +832,8 @@
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1024px) {
-      .benefits { grid-template-columns: repeat(2, 1fr); }
+      .benefits-row-1 { grid-template-columns: repeat(3, 1fr); }
+      .benefits-row-2 { width: calc(66.66% + 6px); }
       .values-row-1 { grid-template-columns: repeat(3, 1fr); }
       .values-row-2 { width: calc(66.66% + 6px); }
       .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -855,10 +859,9 @@
       .svc-grid,
       .test-grid { grid-template-columns: 1fr; }
 
-      .benefits { grid-template-columns: 1fr; }
+      .benefits-row-1, .benefits-row-2 { grid-template-columns: 1fr; width: 100%; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .values-row-1 { grid-template-columns: repeat(2, 1fr); }
-      .values-row-2 { grid-template-columns: 1fr; width: 100%; }
+      .values-row-1, .values-row-2 { grid-template-columns: 1fr; width: 100%; }
 
       .featured-win { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
@@ -1066,31 +1069,35 @@
         <h2 class="rv">We're Not a Big Agency. That's the Point.</h2>
         <p class="rv" style="margin-top:14px;">Here's what sets us apart from every other digital marketing agency you've spoken to.</p>
       </div>
-      <div class="benefits">
-        <div class="benefit rv">
-          <span class="benefit-num">Small Business Fluent</span>
-          <h3>We Speak Small Business</h3>
-          <p>With 15+ years in tech and hands-on consulting experience working directly with small businesses in Los Angeles and across the country, we understand your constraints. Real-world budgets. Real-world goals.</p>
+      <div class="benefits-grid">
+        <div class="benefits-row benefits-row-1">
+          <div class="benefit rv">
+            <span class="benefit-num">Small Business Fluent</span>
+            <h3>We Speak Small Business</h3>
+            <p>With 15+ years in tech and hands-on consulting experience working directly with small businesses in Los Angeles and across the country, we understand your constraints. Real-world budgets. Real-world goals.</p>
+          </div>
+          <div class="benefit rv d1">
+            <span class="benefit-num">Systems Mindset</span>
+            <h3>We're Wired to Find What's Broken</h3>
+            <p>Our founder spent over a decade as a Software QA Test Manager. That same precision and analytical mindset is applied to every client's digital presence. We find the gaps, fix them with intention, and make sure results hold.</p>
+          </div>
+          <div class="benefit rv d2">
+            <span class="benefit-num">Future-Ready</span>
+            <h3>Future-Proof Visibility</h3>
+            <p>SEO isn't what it was three years ago. We build for both traditional Google search and the AI-powered search landscape — so when someone asks ChatGPT or Perplexity to recommend a business like yours, you show up.</p>
+          </div>
         </div>
-        <div class="benefit rv d1">
-          <span class="benefit-num">Systems Mindset</span>
-          <h3>We're Wired to Find What's Broken</h3>
-          <p>Our founder spent over a decade as a Software QA Test Manager. That same precision and analytical mindset is applied to every client's digital presence. We find the gaps, fix them with intention, and make sure results hold.</p>
-        </div>
-        <div class="benefit rv d2">
-          <span class="benefit-num">Future-Ready</span>
-          <h3>Future-Proof Visibility</h3>
-          <p>SEO isn't what it was three years ago. We build for both traditional Google search and the AI-powered search landscape — so when someone asks ChatGPT or Perplexity to recommend a business like yours, you show up.</p>
-        </div>
-        <div class="benefit rv d1">
-          <span class="benefit-num">Track Record</span>
-          <h3>Proven Local Results</h3>
-          <p>We've helped local service businesses rank #1 in Google Maps, build five-star review profiles, and generate consistent inbound leads. We know what it takes to compete and win at the local level.</p>
-        </div>
-        <div class="benefit rv d2">
-          <span class="benefit-num">One Team</span>
-          <h3>One Team. Full Picture.</h3>
-          <p>Strategy, execution, and ongoing management — all under one roof. No juggling vendors, no dropped balls, no excuses.</p>
+        <div class="benefits-row benefits-row-2">
+          <div class="benefit rv d1">
+            <span class="benefit-num">Track Record</span>
+            <h3>Proven Local Results</h3>
+            <p>We've helped local service businesses rank #1 in Google Maps, build five-star review profiles, and generate consistent inbound leads. We know what it takes to compete and win at the local level.</p>
+          </div>
+          <div class="benefit rv d2">
+            <span class="benefit-num">One Team</span>
+            <h3>One Team. Full Picture.</h3>
+            <p>Strategy, execution, and ongoing management — all under one roof. No juggling vendors, no dropped balls, no excuses.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1400,6 +1407,7 @@
         <div class="cta-btns rv">
           <button class="btn btn-gold" onclick="goto('contact')">Book Your Free Discovery Call →</button>
         </div>
+        <span class="cta-note rv" style="font-size:12px;">The free discovery call is an informational consultation only. Ascendify Solutions does not guarantee any specific outcomes, deliverables, or implementation plans as a result of this call. Participation is at your own discretion.</span>
       </div>
     </div>
   </section>
@@ -1540,6 +1548,7 @@
         <div class="cta-btns">
           <button class="btn btn-gold" onclick="goto('contact')">Book My Free Discovery Call →</button>
         </div>
+        <span class="cta-note" style="font-size:12px;">The free discovery call is an informational consultation only. Ascendify Solutions does not guarantee any specific outcomes, deliverables, or implementation plans as a result of this call. Participation is at your own discretion.</span>
       </div>
     </div>
   </section>
@@ -1879,7 +1888,7 @@ const SVC = {
       "Monthly performance reporting and strategy refinement"
     ],
     callout: null,
-    proof: "One of our clients in the mobile auto detailing space now holds the #1 position in Google Maps for their target service area, with 1,500+ verified five-star reviews. That's the power of a fully managed local SEO strategy done right."
+    proof: "One of our clients in the mobile auto detailing space continuously holds the top 3 position in Google Maps for their target service area, with 100+ verified five-star reviews. That's the power of a fully managed local SEO strategy done right."
   },
   'content': {
     icon: `<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#D5B129" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M26 6H12a3 3 0 0 0-3 3v26a3 3 0 0 0 3 3h20a3 3 0 0 0 3-3V16L26 6z"/><path d="M26 6v10h10"/><path d="M16 22h12M16 27h8"/></svg>`,
@@ -1966,6 +1975,13 @@ function goto(page, pushState = true) {
 
   if (PAGE_META[page]) setMeta(PAGE_META[page].title, PAGE_META[page].desc);
 
+  if (page === 'services') {
+    const overview = document.getElementById('svc-overview');
+    const detail = document.getElementById('svc-detail');
+    if (overview) overview.style.display = 'block';
+    if (detail) detail.style.display = 'none';
+  }
+
   if (pushState && PAGE_SLUG[page]) {
     history.pushState({ page }, '', PAGE_SLUG[page]);
   }
@@ -2009,7 +2025,7 @@ function showSvc(id) {
       <div class="svc-detail-body">
         <p style="margin-bottom:22px;">${s.lead}</p>
         <p>${s.body}</p>
-        <h3 style="font-family:'Exo2',sans-serif;font-size:12px;color:var(--gold);letter-spacing:0.16em;text-transform:uppercase;margin:24px 0 16px;">What's Included</h3>
+        <h3 style="font-family:'Exo2',sans-serif;font-size:14px;color:var(--gold);letter-spacing:0.16em;text-transform:uppercase;margin:24px 0 16px;">What's Included</h3>
         <ul class="feat-list">${s.features.map(f=>`<li>${f}</li>`).join('')}</ul>
         ${s.callout ? `<div class="problem-callout" style="margin-top:28px;"><p>${s.callout}</p></div>` : ''}
         ${s.proof ? `<div class="proof-box"><strong>Proven Result</strong><p>${s.proof}</p></div>` : ''}
